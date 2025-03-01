@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout & Payment</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/checkout.css">
+</head>
+<body>
+    <div class="checkout-container">
+        <h1>Checkout</h1>
+        <div class="order-summary">
+            <h2>Order Summary</h2>
+            <div class="cart-items"></div>
+            <div class="total">
+                <strong>Total:</strong> $<span id="order-total">0.00</span>
+            </div>
+        </div>
+
+        <form id="checkout-form">
+            <!-- Contact Information -->
+            <h2>Contact Information</h2>
+            <input type="email" id="email" placeholder="Email" required />
+            <label>
+                <input type="checkbox" id="newsletter" />
+                Email me with news and offers
+            </label>
+
+            <!-- Shipping Address -->
+            <h2>Shipping Address</h2>
+            <input type="text" id="fname" placeholder="First Name" required />
+            <input type="text" id="lname" placeholder="Last Name" required />
+            <input type="text" id="street" placeholder="Street Address" required />
+            <input type="text" id="city" placeholder="City" required />
+            <input type="text" id="zip" placeholder="ZIP Code" required />
+
+            <!-- Payment -->
+            <h2>Payment</h2>
+            <select id="payment-method" required>
+                <option value="" disabled selected>Select Payment Method</option>
+                <option value="Credit Card">Credit Card</option>
+                <option value="PayPal">PayPal</option>
+                <option value="Apple Pay">Apple Pay</option>
+            </select>
+            <button type="submit">Complete Purchase</button>
+        </form>
+    </div>
+
+    <script src="js/resp.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+</html>
